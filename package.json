@@ -1,0 +1,28 @@
+{
+  "name": "react-redux-async-sample",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": "hokuma",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "es6-promise": "^2.3.0",
+    "flux": "^2.0.3",
+    "glob": "^5.0.14",
+    "gulp": "^3.9.0",
+    "object-assign": "^3.0.0",
+    "react": "^0.13.3",
+    "react-redux": "^0.2.2",
+    "redux": "^1.0.0-rc",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
