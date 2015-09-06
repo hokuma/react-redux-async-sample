@@ -14,12 +14,32 @@ export function receiveTodos(todos) {
     };
 }
 
-export const CREATE_TODO = 'CREATE_TODO';
-export function createTodo(text) {
+export const ADD_TODO = 'ADD_TODO';
+export function addTodo(todo) {
     return {
-        type: CREATE_TODO,
-        text: text
+        type: ADD_TODO,
+        todo: todo
     };
+}
+export const SAVE_TODO = 'SAVE_TODO';
+export function saveTodo(todo) {
+    return {
+        type: SAVE_TODO,
+        todo: todo
+    };
+}
+export function createTodo(text) {
+    var todo = {status: 0, text: text};
+    return (dispatch, getState) => {
+        dispatch(addTodo(todo));
+        return $.post(
+            'http://127.0.0.1:3000/todos',
+            {text: text}
+        ).then(data => {
+            todo.id = data.todo.id;
+            dispatch(saveTodo(todo));
+        });
+    }
 }
 
 export const FINISH_TODO = 'FINISH_TODO';
