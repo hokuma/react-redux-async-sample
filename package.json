@@ -21,8 +21,8 @@
     "gulp": "^3.9.0",
     "object-assign": "^3.0.0",
     "react": "^0.13.3",
-    "react-redux": "^0.2.2",
-    "redux": "^1.0.0-rc",
+    "react-redux": "2.1.0",
+    "redux": "2.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
 }
